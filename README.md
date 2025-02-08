@@ -27,13 +27,21 @@ conda env create --file requirements_windows.yaml --name %EVN_NAME%
 ```
 pip install -e .
 ```
+### Now, in order to begin training, you need to ensure several things. Please make sure that you have likely downgraded your system to the correct versions of pip, pyDeprecate, and NumPy for this code to run correctly. 
+```
+pip install --upgrade pip==24.0
+pip install pyDeprecate==0.3.1
+pip install numpy==1.24.3
+```
+
 
 ### Main model training
 * Start the training with
 ```
-python terminal_scripts/train_main_model.py
+python -m terminal_scripts.train_main_model
 ```
 This should log a wandb run and produce a checkpoint in `MODEL_CHECKPOINTS` directory. Training data is generated on the fly.
+You may need to create an account to log the training and copy the API key into the terminal using CTRL+V, then begin the training process.
 
 ### Generate testing data with an exact solver
 * Install Concorde TSP solver from [https://www.math.uwaterloo.ca/tsp/concorde.html]
