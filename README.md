@@ -1,7 +1,8 @@
 ## Supplementary code for "Finding Hamiltonian cycles with Graph neural networks"
+## I am updating this project as part of my graduate work and graduate thesis. All credit goes to the original authors: Filip Bosnic (University Zagreb) and Mile Sikic (Genome Institute of Singapore)
 
 ### Paper
-* the accompanying paper will be available soon ...
+* [Paper](https://arxiv.org/pdf/2306.06523) on arxiv
 
 ### Requirements:
 * [Python](https://www.python.org/) 3.8 or later
@@ -12,12 +13,17 @@
 
 ### Setup
 (Commands are supposed to be run from the root environment)
-* Use conda to create a new environemnt with
+* Use conda to create a new environemnt with (Linux)
 ```
 export ENV_NAME="hamgnn"
 conda env create --file requirements.yaml --name $ENV_NAME
 ```
-* Then add this package in develop mode
+Windows equivalent: 
+```
+set ENV_NAME=hamgnn
+conda env create --file requirements_windows.yaml --name %EVN_NAME%
+```
+* Then add this package in develop mode (same for Linux and Windows)
 ```
 pip install -e .
 ```
