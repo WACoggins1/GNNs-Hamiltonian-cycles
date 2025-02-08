@@ -18,7 +18,7 @@
 export ENV_NAME="hamgnn"
 conda env create --file requirements.yaml --name $ENV_NAME
 ```
-Windows equivalent: 
+* Windows equivalent: 
 ```
 set ENV_NAME=hamgnn
 conda env create --file requirements_windows.yaml --name %EVN_NAME%
